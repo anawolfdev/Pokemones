@@ -1,4 +1,5 @@
 import React from 'react';
+//import '../stylesheets/App.css';
 
 const data = [
   {
@@ -92,11 +93,9 @@ class App extends React.Component {
           {data.map((item, index) => {
             return (
               <li className='name' key={`p${index}`} id={`p${index}`}>
+                <img src={item.url} alt='url_image' />
                 <div className='pokemoncard'>
                   <h2 className='pokemon__name'>{item.name}</h2>
-                  <ul className='url'>
-                    <img src={item.url} alt='url_image' />
-                  </ul>
                 </div>
               </li>
             );
