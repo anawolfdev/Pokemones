@@ -8,7 +8,7 @@ const pokemonTypes = props => {
 
 const Pokemon = props => {
   return (
-    <li>
+    <li className='pokemons'>
       <img
         src={props.pokemon.url}
         alt={props.pokemon.name}
