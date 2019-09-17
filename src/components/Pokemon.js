@@ -2,7 +2,11 @@ import React from 'react';
 
 const pokemonTypes = props => {
   return props.pokemon.types.map((type, index) => {
-    return <li key={index}>{type}</li>;
+    return (
+      <li className='pokemon__skills' key={index}>
+        {type}
+      </li>
+    );
   });
 };
 
