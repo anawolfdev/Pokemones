@@ -15,6 +15,20 @@ class App extends React.Component {
         pokemons: pokemons
       });
     });
+    this.addToFavorites = this.addToFavorites.bind(this);
+  }
+
+  //method of my class
+  addToFavorites(id) {
+    const pokemons = this.state.pokemons.map(pokemon => {
+      if (pokemon.id === id) {
+        pokemon.fav = true;
+      }
+      return pokemon;
+    });
+    this.setState({
+      pokemons: pokemons
+    });
   }
 
   render() {
@@ -24,7 +38,7 @@ class App extends React.Component {
     return (
       <div className='App'>
         <h1 className='title'>Mi lista de Pokemon</h1>
-        <PokeList pokemons={pokemons} />
+        <PokeList pokemons={pokemons} addToFavorites={this.addToFavorites} />
       </div>
     );
   }

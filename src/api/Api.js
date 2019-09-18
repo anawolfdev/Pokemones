@@ -5,9 +5,11 @@ const getPokemons = () => {
       console.log(pokemons);
       return pokemons.map(pokemon => {
         return {
+          id: pokemon.id,
           url: pokemon.url,
           name: pokemon.name,
-          types: pokemon.types
+          types: pokemon.types,
+          fav: false
         };
       });
     })

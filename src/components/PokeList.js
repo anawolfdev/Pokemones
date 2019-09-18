@@ -4,11 +4,18 @@ import Pokemon from './Pokemon';
 const renderList = props => {
   console.log(props);
   return props.pokemons.map((pokemon, index) => {
-    return <Pokemon key={index} pokemon={pokemon} />;
+    return (
+      <Pokemon
+        key={index}
+        pokemon={pokemon}
+        addToFavorites={props.addToFavorites}
+      />
+    );
   });
 };
 
 const PokeList = props => {
+  console.log(props);
   return <ul className='pokemon__list'>{renderList(props)}</ul>;
 };
 
