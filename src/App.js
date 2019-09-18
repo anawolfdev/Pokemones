@@ -22,7 +22,13 @@ class App extends React.Component {
   addToFavorites(id) {
     const pokemons = this.state.pokemons.map(pokemon => {
       if (pokemon.id === id) {
-        pokemon.fav = true;
+        console.log(id);
+        if (pokemon.fav === true) {
+          console.log(pokemon.fav);
+          pokemon.fav = false;
+        } else {
+          pokemon.fav = true;
+        }
       }
       return pokemon;
     });
