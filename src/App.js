@@ -22,9 +22,7 @@ class App extends React.Component {
   addToFavorites(id) {
     const pokemons = this.state.pokemons.map(pokemon => {
       if (pokemon.id === id) {
-        console.log(id);
         if (pokemon.fav === true) {
-          console.log(pokemon.fav);
           pokemon.fav = false;
         } else {
           pokemon.fav = true;
@@ -39,8 +37,6 @@ class App extends React.Component {
 
   render() {
     const pokemons = this.state.pokemons;
-    console.log(pokemons);
-    console.log('Rendering...');
     return (
       <div className='App'>
         <h1 className='title'>Mi lista de Pokemon</h1>

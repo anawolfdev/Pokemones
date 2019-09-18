@@ -2,7 +2,6 @@ const getPokemons = () => {
   return fetch('./pokemon-data.json')
     .then(res => res.json())
     .then(pokemons => {
-      console.log(pokemons);
       return pokemons.map(pokemon => {
         return {
           id: pokemon.id,
