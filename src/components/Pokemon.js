@@ -15,7 +15,7 @@ const Pokemon = props => {
     props.addToFavorites(props.pokemon.id);
   };
 
-  const bgColor = props.pokemon.fav === true ? 'red' : 'blue';
+  const bgColor = props.pokemon.fav === true ? '#67f33c' : '#ebe6f9';
 
   return (
     <li

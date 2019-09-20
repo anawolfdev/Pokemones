@@ -7,6 +7,7 @@ const renderList = props => {
       <Pokemon
         key={index}
         pokemon={pokemon}
+        pokeFilter={props.handlePokeFilter}
         addToFavorites={props.addToFavorites}
       />
     );
