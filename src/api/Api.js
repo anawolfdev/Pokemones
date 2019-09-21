@@ -9,7 +9,6 @@ const getPokemons = () => {
           name: pokemon.name,
           types: pokemon.types,
           fav: false
-          //pokeFilter: ''
         };
       });
     })

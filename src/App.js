@@ -37,9 +37,7 @@ class App extends React.Component {
       }
       return pokemon;
     });
-    //console.log(pokemons);
     filterPokemons = pokemons;
-    this.forceUpdate();
     this.setState({
       pokemons: pokemons
     });
@@ -54,7 +52,6 @@ class App extends React.Component {
     filterPokemons = this.state.pokemons.filter(pokemon => {
       return pokemon.name.includes(this.state.pokeFilter);
     });
-    //const pokemons = this.state.pokemons;
     return (
       <div className='App'>
         <h1 className='title'>Mi lista de Pokemon</h1>
