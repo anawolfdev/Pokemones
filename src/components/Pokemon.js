@@ -11,8 +11,18 @@ const pokemonTypes = props => {
 };
 
 const Pokemon = props => {
+  const handleClick = () => {
+    props.addToFavorites(props.pokemon.id);
+  };
+
+  const bgColor = props.pokemon.fav === true ? '#67f33c' : '#ebe6f9';
+
   return (
-    <li className='pokemons'>
+    <li
+      className='pokemons'
+      onClick={handleClick}
+      style={{ backgroundColor: bgColor }}
+    >
       <img
         src={props.pokemon.url}
         alt={props.pokemon.name}
